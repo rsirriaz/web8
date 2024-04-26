@@ -1,0 +1,173 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500&family=Unbounded:wght@500;700;800&display=swap');
+
+
+body {
+    font-family: $font-sans;
+    height: 100%;
+    background-color: $bg;
+    color: $text;
+}
+
+a {
+    text-decoration: none;
+    color: initial
+}
+
+::selection {
+    background-color: $secondary;
+    color: $text;
+}
+
+nav {
+    padding: 20px;
+    margin-bottom: -100px;
+    z-index: 10;
+    position: relative;
+}
+    .logo a {
+        font-family: $font-serif;
+        font-size: 21px;
+        color: $text;
+        transition: all .45s ease;
+    }
+
+        &:hover {
+            color: primary;
+        }
+    
+    .menu-list {
+             
+                padding: 10 5vw 10 10;
+            }
+                a {
+                    position: relative;
+                    transition: all .45s ease;
+                    opacity: 1;
+                    z-index: 1;
+                    padding: 10px;
+                }
+                    &:hover {
+                        color: $primary;
+                        &:after {
+                            opacity: 1;
+                        }
+                    }
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        transform-origin: center;
+                        transform: scale(1.52);
+                        left: 0;
+                        right: 0;
+                        margin: auto;
+                        bottom: 0;
+                        top: 0;
+                        border: 2px solid $secondary;
+                        border-radius: 50%;
+                        z-index: -1;
+                        opacity: 0;
+                        transition: all .45s ease;
+                    }
+                }
+            }
+    }
+}
+
+.button-menu {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: end;
+    .ri-menu-5-line {
+        font-size: 24px;
+    }
+}
+
+.headline {
+    position: relative;
+    padding: 15% 15% 5% 5%;
+    h1 {
+        font-size: clamp(4rem, 8vw, 10rem);
+        line-height: 1;
+        font-family: $font-serif;
+        margin-bottom: 5%;
+    }
+    p {
+        margin-bottom: 5%;
+    }
+    .arrow-deco svg {
+        max-width: 100px;
+        position: absolute;
+        bottom: 8%;
+        left: 28vw;
+
+    }
+}
+
+.headline-img {
+    background-color: $primary;
+    background-image: url("https://images.pexels.com/photos/2597205/pexels-photo-2597205.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.box-numbers {
+    display: flex;
+    align-items: center;
+    font-size: $font-serif;
+    font-weight: 700;
+    text-transform: capitalize;
+    padding-top: clamp(4rem, 2vw, 5rem);
+    .divider {
+        margin: 0 20px;
+        height: 50px;
+        width: 2px;
+        background-color: $text;
+        opacity: .25;
+    }
+    h4 {
+        margin: 0;
+    }
+}
+
+
+
+.btn {
+    padding: 18px 24px;
+    border-radius: 0;
+    border: 0;
+    max-width: 130px;
+}
+
+.btn-primary {
+    background-color: $text;
+    color: $primary;
+    &:hover {
+        background-color: $bg;
+        color: $text;
+    }
+}
+
+.btn-secondary {
+    background-color: $primary;
+    color: $text;
+    &:hover {
+        background-color: $text;
+        color: $primary;
+    }
+}
+
+@media (max-width: 750px) {
+    .headline {
+        padding:25% 5% 5%;
+    }
+    .headline-img {
+        background-position: 50% 30%;
+        height: 40vh;
+    }
+}
